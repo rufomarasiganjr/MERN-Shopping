@@ -1,0 +1,32 @@
+{
+  "name": "shopee-list",
+  "version": "1.0.0",
+  "description": "Shopping list built with the MERN stack",
+  "engines": {
+    "node": "13.0.1",
+    "npm": "6.12.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+
+  "author": "rufo.marasigan.jr@tip.edu.ph",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "concurrently": "^5.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.9",
+    "react-transition-group": "^4.3.0",
+    "reactstrap": "^8.1.1",
+    "uuid": "^3.3.3",
+    "nodemon": "^1.19.4"
+  }
+ }
